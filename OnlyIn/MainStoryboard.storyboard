@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QYr-i6-CZ6">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller - Login-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCX-jk-6OT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="ikp-76-yaM"/>
+                                </constraints>
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-hx-asU">
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bmy-GT-8Jj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="Shz-ph-HaG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gabriola" family="Gabriola" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Login">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="2" eventType="touchUpInside" id="N4R-6i-UxR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kgx-Ve-HLD">
+                                <fontDescription key="fontDescription" name="Gabriola" family="Gabriola" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Sign Up">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="Aou-Q1-MaP" kind="push" id="5Yx-WC-EPz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-GV-ekt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="5fl-L9-plN"/>
+                                    <constraint firstAttribute="width" constant="141" id="I2r-Da-5qF"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="New User?">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wCX-jk-6OT" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="6w7-du-hRh"/>
+                            <constraint firstItem="gwk-hx-asU" firstAttribute="trailing" secondItem="wCX-jk-6OT" secondAttribute="trailing" type="default" id="DSE-KI-A4W"/>
+                            <constraint firstItem="Bmy-GT-8Jj" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="QIA-e7-g2S"/>
+                            <constraint firstItem="Kgx-Ve-HLD" firstAttribute="trailing" secondItem="gwk-hx-asU" secondAttribute="trailing" type="default" id="Qho-IV-Dev"/>
+                            <constraint firstItem="CZg-GV-ekt" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="60" id="U7D-3n-OYt"/>
+                            <constraint firstItem="gwk-hx-asU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="71" id="UA1-7A-S8w"/>
+                            <constraint firstItem="CZg-GV-ekt" firstAttribute="top" secondItem="3" secondAttribute="top" constant="189" id="aSf-y6-o6q"/>
+                            <constraint firstItem="gwk-hx-asU" firstAttribute="leading" secondItem="wCX-jk-6OT" secondAttribute="leading" type="default" id="fmF-85-y3z"/>
+                            <constraint firstItem="Bmy-GT-8Jj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="119" id="jEc-Yh-sB2"/>
+                            <constraint firstItem="Kgx-Ve-HLD" firstAttribute="top" secondItem="3" secondAttribute="top" constant="188" id="laJ-fW-2fT"/>
+                            <constraint firstItem="Bmy-GT-8Jj" firstAttribute="centerX" secondItem="gwk-hx-asU" secondAttribute="centerX" type="default" id="sfG-Db-L2v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="vB0-ij-2f8"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <connections>
+                        <outlet property="userNameTextField" destination="wCX-jk-6OT" id="vi2-my-HbJ"/>
+                        <outlet property="userPasswordTextField" destination="gwk-hx-asU" id="mnZ-mM-81U"/>
+                        <segue destination="8GN-ud-WuS" kind="push" identifier="loginSuccess" id="hg3-5h-VfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="-350"/>
+        </scene>
+        <!--Home View Controller - Welcome User-->
+        <scene sceneID="1NC-cG-7rv">
+            <objects>
+                <viewController id="8GN-ud-WuS" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7RT-hS-9IG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vbv-GG-ezz">
+                                <fontDescription key="fontDescription" name="Gabriola" family="Gabriola" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="View Albums">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="imX-y0-mQ1" kind="push" identifier="viewAlbums" id="YYe-61-BQ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpI-kp-4nj">
+                                <fontDescription key="fontDescription" name="Gabriola" family="Gabriola" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Create New Album">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="pN5-DR-KLV" kind="push" identifier="createNewAlbum" id="CoX-Gy-x0f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your Current Location is:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wew-6F-Qvi">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wew-6F-Qvi" firstAttribute="centerX" secondItem="Vbv-GG-ezz" secondAttribute="centerX" type="default" id="8Uj-4z-tGH"/>
+                            <constraint firstItem="wew-6F-Qvi" firstAttribute="centerX" secondItem="7RT-hS-9IG" secondAttribute="centerX" type="default" id="AsQ-0u-eUg"/>
+                            <constraint firstItem="Vbv-GG-ezz" firstAttribute="top" secondItem="7RT-hS-9IG" secondAttribute="top" constant="120" id="QTK-rU-Li1"/>
+                            <constraint firstItem="jpI-kp-4nj" firstAttribute="top" secondItem="7RT-hS-9IG" secondAttribute="top" constant="185" id="hpD-jv-j1e"/>
+                            <constraint firstItem="wew-6F-Qvi" firstAttribute="top" secondItem="7RT-hS-9IG" secondAttribute="top" constant="27" id="m9T-8K-nhk"/>
+                            <constraint firstItem="jpI-kp-4nj" firstAttribute="centerX" secondItem="Vbv-GG-ezz" secondAttribute="centerX" type="default" id="mKs-vD-fhv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome User" id="fW4-F3-hV6"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <connections>
+                        <outlet property="createNewAlbumButton" destination="jpI-kp-4nj" id="gBs-oc-4gd"/>
+                        <outlet property="viewAlbumsButton" destination="Vbv-GG-ezz" id="WR5-wf-3WN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fsv-50-H03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914" y="-350"/>
+        </scene>
+        <!--View Albums Table View Controller - Albums-->
+        <scene sceneID="9ka-0I-EUX">
+            <objects>
+                <tableViewController id="imX-y0-mQ1" customClass="ViewAlbumsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="soY-EJ-Of2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newCell" textLabel="qaq-hW-BB8" detailTextLabel="C4F-SG-kKW" rowHeight="49" style="IBUITableViewCellStyleSubtitle" id="YlU-GE-woF">
+                                <rect key="frame" x="0.0" y="22" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaq-hW-BB8">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4F-SG-kKW">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="imX-y0-mQ1" id="4og-l2-w5r"/>
+                            <outlet property="delegate" destination="imX-y0-mQ1" id="fTA-L7-q3g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Albums" id="kyU-37-V3o">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="MNp-xZ-0of">
+                            <connections>
+                                <action selector="exitButton:" destination="imX-y0-mQ1" id="Vqy-Nf-vFz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="F0L-rW-Ghv" kind="push" identifier="seeAlbum" id="zos-OE-LLc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0w-Yy-qzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1719" y="-363"/>
+        </scene>
+        <!--See Your Album View Controller - albumView-->
+        <scene sceneID="3aX-nd-zqu">
+            <objects>
+                <viewController storyboardIdentifier="albumView" title="albumView" id="F0L-rW-Ghv" customClass="SeeYourAlbumViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HMN-Oy-lFm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wfj-i9-3cv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="444" id="QDO-Ek-jfB"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Mh6-Lu-m7b">
+                                    <size key="itemSize" width="75" height="75"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newCell" id="fky-FF-5ga">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DuA-oj-NcV"/>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="DuA-oj-NcV" firstAttribute="trailing" secondItem="fky-FF-5ga" secondAttribute="trailing" type="default" id="dtB-bF-4Wc"/>
+                                            <constraint firstItem="DuA-oj-NcV" firstAttribute="top" secondItem="fky-FF-5ga" secondAttribute="top" type="default" id="p5J-F0-yNq"/>
+                                            <constraint firstItem="DuA-oj-NcV" firstAttribute="bottom" secondItem="fky-FF-5ga" secondAttribute="bottom" type="default" id="pOu-7T-jsw"/>
+                                            <constraint firstItem="DuA-oj-NcV" firstAttribute="leading" secondItem="fky-FF-5ga" secondAttribute="leading" type="default" id="rVz-2G-OIY"/>
+                                        </constraints>
+                                        <size key="customSize" width="75" height="75"/>
+                                        <connections>
+                                            <segue destination="dBK-d8-edi" kind="push" id="6H1-a0-Zd8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="F0L-rW-Ghv" id="4gA-US-uwH"/>
+                                    <outlet property="delegate" destination="F0L-rW-Ghv" id="xlP-Vb-bNc"/>
+                                </connections>
+                            </collectionView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rx-GY-QYP">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items/>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Rx-GY-QYP" firstAttribute="bottom" secondItem="HMN-Oy-lFm" secondAttribute="bottom" type="default" id="8te-Gq-S4m"/>
+                            <constraint firstItem="wfj-i9-3cv" firstAttribute="top" secondItem="HMN-Oy-lFm" secondAttribute="top" type="default" id="AGg-K4-bP2"/>
+                            <constraint firstItem="wfj-i9-3cv" firstAttribute="trailing" secondItem="HMN-Oy-lFm" secondAttribute="trailing" type="default" id="NIg-z8-ARz"/>
+                            <constraint firstItem="wfj-i9-3cv" firstAttribute="leading" secondItem="HMN-Oy-lFm" secondAttribute="leading" type="default" id="hjP-AB-qoQ"/>
+                            <constraint firstItem="9Rx-GY-QYP" firstAttribute="leading" secondItem="HMN-Oy-lFm" secondAttribute="leading" type="default" id="npw-q6-1Sl"/>
+                            <constraint firstItem="9Rx-GY-QYP" firstAttribute="trailing" secondItem="HMN-Oy-lFm" secondAttribute="trailing" type="default" id="yd1-zH-4Le"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Album Title" id="cfz-fS-BxI"/>
+                    <connections>
+                        <outlet property="collectionView" destination="wfj-i9-3cv" id="hdq-Rg-aJG"/>
+                        <outlet property="tabBar" destination="9Rx-GY-QYP" id="7wU-t1-3sN"/>
+                        <segue destination="KK7-aY-QGn" kind="push" identifier="seeAlbumFriends" id="XU8-Vz-Lyx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRn-L8-h2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2139" y="-363"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="WqE-T1-BbP">
+            <objects>
+                <viewController id="dBK-d8-edi" customClass="ImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2AF-M5-qkD">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y53-bJ-7dW"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y53-bJ-7dW" firstAttribute="top" secondItem="2AF-M5-qkD" secondAttribute="top" type="default" id="IXy-qI-Zyd"/>
+                            <constraint firstItem="y53-bJ-7dW" firstAttribute="leading" secondItem="2AF-M5-qkD" secondAttribute="leading" type="default" id="OWS-m2-EUB"/>
+                            <constraint firstItem="y53-bJ-7dW" firstAttribute="bottom" secondItem="2AF-M5-qkD" secondAttribute="bottom" type="default" id="ZBM-sK-Ai1"/>
+                            <constraint firstItem="y53-bJ-7dW" firstAttribute="trailing" secondItem="2AF-M5-qkD" secondAttribute="trailing" type="default" id="pEd-Qp-pYG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Agr-BJ-zEG"/>
+                    <connections>
+                        <outlet property="imageView" destination="y53-bJ-7dW" id="mBf-Hl-DT2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXr-2r-tv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="124"/>
+        </scene>
+        <!--Album Friends Table View Controller - Album Friends-->
+        <scene sceneID="QPH-Ge-XDc">
+            <objects>
+                <tableViewController id="KK7-aY-QGn" customClass="AlbumFriendsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GbX-AJ-9or">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newCell" id="8vg-5C-acc">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KK7-aY-QGn" id="Huo-nj-6BA"/>
+                            <outlet property="delegate" destination="KK7-aY-QGn" id="b4T-md-j2d"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Album Friends" id="Qpb-gR-97l"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6M-Gw-drn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="-597"/>
+        </scene>
+        <!--Create New Album View Controller - Create Album-->
+        <scene sceneID="KsR-20-XPF">
+            <objects>
+                <viewController id="pN5-DR-KLV" customClass="CreateNewAlbumViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hEK-d2-ijC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVe-lU-4jD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="QNZ-G0-Vwu"/>
+                                </constraints>
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pN5-DR-KLV" id="B2U-Wj-b7o"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gaw-MH-kYu">
+                                <fontDescription key="fontDescription" name="Gabriola" family="Gabriola" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Invite Friends">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="showContacts:" destination="pN5-DR-KLV" eventType="touchUpInside" id="pb7-2k-FrG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3J-BQ-VWf">
+                                <fontDescription key="fontDescription" name="Gabriola" family="Gabriola" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Save Album">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="saveAlbum:" destination="pN5-DR-KLV" eventType="touchUpInside" id="eVk-84-rF1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Album Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO6-Yw-ODB">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="G3i-ED-Eun"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVg-Hc-Zb6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="rFi-28-0r1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NO6-Yw-ODB" firstAttribute="top" secondItem="KVe-lU-4jD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="0T5-z2-OnZ"/>
+                            <constraint firstItem="gaw-MH-kYu" firstAttribute="centerX" secondItem="WVg-Hc-Zb6" secondAttribute="centerX" type="default" id="Aa3-RT-yHo"/>
+                            <constraint firstItem="WVg-Hc-Zb6" firstAttribute="leading" secondItem="NO6-Yw-ODB" secondAttribute="leading" type="default" id="CSq-uv-c3J"/>
+                            <constraint firstItem="NO6-Yw-ODB" firstAttribute="leading" secondItem="KVe-lU-4jD" secondAttribute="leading" type="default" id="CyD-G1-ruG"/>
+                            <constraint firstItem="KVe-lU-4jD" firstAttribute="top" secondItem="hEK-d2-ijC" secondAttribute="top" constant="20" symbolic="YES" type="default" id="HxC-te-RJA"/>
+                            <constraint firstItem="gaw-MH-kYu" firstAttribute="centerX" secondItem="hEK-d2-ijC" secondAttribute="centerX" type="default" id="PU8-qn-8Nm"/>
+                            <constraint firstItem="WVg-Hc-Zb6" firstAttribute="top" secondItem="hEK-d2-ijC" secondAttribute="top" constant="84" id="bGU-9O-ftu"/>
+                            <constraint firstItem="gaw-MH-kYu" firstAttribute="top" secondItem="hEK-d2-ijC" secondAttribute="top" constant="131" id="fiQ-oz-N3f"/>
+                            <constraint firstItem="g3J-BQ-VWf" firstAttribute="top" secondItem="hEK-d2-ijC" secondAttribute="top" constant="192" id="haG-ak-dCK"/>
+                            <constraint firstItem="WVg-Hc-Zb6" firstAttribute="trailing" secondItem="KVe-lU-4jD" secondAttribute="trailing" type="default" id="i0q-O3-Scq"/>
+                            <constraint firstItem="g3J-BQ-VWf" firstAttribute="centerX" secondItem="gaw-MH-kYu" secondAttribute="centerX" type="default" id="q4G-Qb-xdX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Album" id="Mdl-eU-cO0">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="tXH-JF-5Oh">
+                            <connections>
+                                <action selector="exitButton:" destination="pN5-DR-KLV" id="pSt-uV-jPj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="albumLocationLabel" destination="WVg-Hc-Zb6" id="Zdi-ux-oCG"/>
+                        <outlet property="textField" destination="KVe-lU-4jD" id="nyk-uH-LkC"/>
+                        <segue destination="imX-y0-mQ1" kind="push" identifier="seeNewAlbum" id="OzD-Q5-sPE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEU-Yh-wuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1342" y="431"/>
+        </scene>
+        <!--Sign Up View Controller - Sign Up-->
+        <scene sceneID="GA1-hz-QK8">
+            <objects>
+                <viewController id="Aou-Q1-MaP" customClass="SignUpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wYo-VA-YfJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x6R-ag-YCV">
+                                <fontDescription key="fontDescription" name="Gabriola" family="Gabriola" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Submit">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="submitInformation:" destination="Aou-Q1-MaP" eventType="touchUpInside" id="L05-0H-q1j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x6R-ag-YCV" firstAttribute="top" secondItem="wYo-VA-YfJ" secondAttribute="top" constant="209" id="ZIe-m0-LIg"/>
+                            <constraint firstItem="x6R-ag-YCV" firstAttribute="centerX" secondItem="wYo-VA-YfJ" secondAttribute="centerX" type="default" id="nRb-SA-3CE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign Up" id="pOA-Ig-6iV"/>
+                    <connections>
+                        <segue destination="8GN-ud-WuS" kind="push" identifier="signUpSuccess" id="t2s-nB-Q4m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSJ-CT-qyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="441"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VQE-L1-X8D">
+            <objects>
+                <navigationController id="QYr-i6-CZ6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="af9-3n-pPN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="v1F-CS-D1q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G33-9i-dcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-344" y="-92"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="AlbumFriendsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlbumFriendsTableViewController.h"/>
+        </class>
+        <class className="CoreDataTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
+        </class>
+        <class className="CreateNewAlbumViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateNewAlbumViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="exitButton:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="saveAlbum:" candidateClass="UIButton"/>
+                <relationship kind="action" name="showContacts:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="albumLocationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="createNewAlbumButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="viewAlbumsButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userPasswordTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SeeYourAlbumViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SeeYourAlbumViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="tabBar" candidateClass="UITabBar"/>
+            </relationships>
+        </class>
+        <class className="SignUpViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignUpViewController.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="ViewAlbumsTableViewController" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewAlbumsTableViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="OzD-Q5-sPE"/>
+        <segue reference="hg3-5h-VfB"/>
+    </inferredMetricsTieBreakers>
+</document>

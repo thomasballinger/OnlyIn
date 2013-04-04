@@ -1,29 +1,32 @@
 //
-//  ViewController.m
+//  SignUpViewController.m
 //  OnlyIn
 //
 //  Created by Jennifer Clark on 3/25/13.
 //  Copyright (c) 2013 Jennifer Clark. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SignUpViewController.h"
 
-@interface ViewController ()
+@interface SignUpViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SignUpViewController
+
+- (IBAction)submitInformation:(UIButton *)sender
+{
+    [self performSegueWithIdentifier:@"signUpSuccess" sender:self];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

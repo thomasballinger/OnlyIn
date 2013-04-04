@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginViewController.h
 //  OnlyIn
 //
 //  Created by Jennifer Clark on 3/25/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LoginViewController : UIViewController
 
 @end

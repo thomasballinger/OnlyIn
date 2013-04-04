@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Album" representedClassName="Album" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoCounter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="whichAlbum" inverseEntity="Photo" syncable="YES"/>
+    </entity>
+    <entity name="Photo" representedClassName="Photo" syncable="YES">
+        <attribute name="albumID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="photoDataLarge" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="photoDataSmall" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="photoID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="whichAlbum" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="photos" inverseEntity="Album" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Album" positionX="405" positionY="318" width="128" height="120"/>
+        <element name="Photo" positionX="160" positionY="192" width="128" height="120"/>
+    </elements>
+</model>
