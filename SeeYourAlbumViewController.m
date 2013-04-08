@@ -135,7 +135,6 @@
 {
     [self.collectionView performBatchUpdates:^{
         NSArray *selectedIndexPath = [[NSArray alloc]initWithObjects:sender.indexPath, nil];
-        
         //remove from core data
         ImageViewWithPhotoTag *thisPhoto = [self.pictures objectAtIndex:sender.indexPath.row];
         Album *thisAlbum = self.album;
