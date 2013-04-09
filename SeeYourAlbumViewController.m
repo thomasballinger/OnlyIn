@@ -218,28 +218,26 @@
 }
 
 - (NSMutableDictionary *) buildPhotoDictionary:(UIImage *) image {
-    NSMutableDictionary *photoDictionary = [[NSMutableDictionary alloc]initWithCapacity:2];
+    NSMutableDictionary *photoDictionary = [[NSMutableDictionary alloc] init];
+    
+    self.photoCounter = [NSNumber numberWithInt:[self.photoCounter intValue] + 1];
+    photoDictionary[PHOTO_ID] = self.photoCounter;
+
     //crop image for image view in view image view controller
     CGSize maxPhotoSizeForFullPhotoView = CGSizeMake(self.view.frame.size.width *2, self.view.frame.size.height *2);
     //Why the magical times two here? is it for retina?
     UIImageView *imageViewLarge = [[UIImageView alloc]initWithImage:[SeeYourAlbumViewController imageWithImage:image scaledToSize:maxPhotoSizeForFullPhotoView]];
-    
     photoDictionary[LARGE_PHOTO] = imageViewLarge;
     
     //crop image for this collection view
     CGSize maxPhotoSizeForCollectionView = CGSizeMake(MAX_PHOTO_SIZE_FOR_SMALL_PHOTO, MAX_PHOTO_SIZE_FOR_SMALL_PHOTO);
     ImageViewWithPhotoTag *imageViewSmall = [[ImageViewWithPhotoTag alloc] initWithImage:[SeeYourAlbumViewController imageWithImage:image scaledToSize:maxPhotoSizeForCollectionView]];
+    NSString *completePhotoIDStringValue = [NSString stringWithFormat:@"%@%i",self.albumID, [self.photoCounter intValue]];
+    imageViewSmall.photoID = [completePhotoIDStringValue integerValue];
     photoDictionary[SMALL_PHOTO] = imageViewSmall;
     
     photoDictionary[ALBUM_ID_ON_PHOTO] = self.albumID;
     
-    self.photoCounter = [NSNumber numberWithInt:[self.photoCounter intValue] + 1];
-    
-    NSString *completePhotoIDStringValue = [NSString stringWithFormat:@"%@%i",self.albumID, [self.photoCounter intValue]];
-    
-    photoDictionary[PHOTO_ID] = self.photoCounter;
-    
-    ((ImageViewWithPhotoTag *) photoDictionary[SMALL_PHOTO]).photoID = [completePhotoIDStringValue integerValue];
     return photoDictionary;
 }
 
@@ -258,8 +256,6 @@
         [self.pictures addObject:[photoDictionary objectForKey:SMALL_PHOTO]];
         
         [self.collectionView reloadData];
-        
-
 
         //update album attribute photo count
         NSDictionary *updatedAlbumWithNewPhotoCount = [[NSDictionary alloc]initWithObjectsAndKeys:self.photoCounter, PHOTO_COUNTER, self.title, ALBUM_TITLE, self.albumID, ALBUM_ID, self.albumLocation, LOCATION,  nil];
