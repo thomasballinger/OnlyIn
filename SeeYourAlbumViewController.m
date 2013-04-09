@@ -217,41 +217,49 @@
     }
 }
 
+- (NSMutableDictionary *) buildPhotoDictionary:(UIImage *) image {
+    NSMutableDictionary *photoDictionary = [[NSMutableDictionary alloc]initWithCapacity:2];
+    //crop image for image view in view image view controller
+    CGSize maxPhotoSizeForFullPhotoView = CGSizeMake(self.view.frame.size.width *2, self.view.frame.size.height *2);
+    //Why the magical times two here? is it for retina?
+    UIImageView *imageViewLarge = [[UIImageView alloc]initWithImage:[SeeYourAlbumViewController imageWithImage:image scaledToSize:maxPhotoSizeForFullPhotoView]];
+    
+    photoDictionary[LARGE_PHOTO] = imageViewLarge;
+    
+    //crop image for this collection view
+    CGSize maxPhotoSizeForCollectionView = CGSizeMake(MAX_PHOTO_SIZE_FOR_SMALL_PHOTO, MAX_PHOTO_SIZE_FOR_SMALL_PHOTO);
+    ImageViewWithPhotoTag *imageViewSmall = [[ImageViewWithPhotoTag alloc] initWithImage:[SeeYourAlbumViewController imageWithImage:image scaledToSize:maxPhotoSizeForCollectionView]];
+    photoDictionary[SMALL_PHOTO] = imageViewSmall;
+    
+    photoDictionary[ALBUM_ID_ON_PHOTO] = self.albumID;
+    
+    self.photoCounter = [NSNumber numberWithInt:[self.photoCounter intValue] + 1];
+    
+    NSString *completePhotoIDStringValue = [NSString stringWithFormat:@"%@%i",self.albumID, [self.photoCounter intValue]];
+    
+    photoDictionary[PHOTO_ID] = self.photoCounter;
+    
+    ((ImageViewWithPhotoTag *) photoDictionary[SMALL_PHOTO]).photoID = [completePhotoIDStringValue integerValue];
+    return photoDictionary;
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    NSMutableDictionary *photoDictionary = [[NSMutableDictionary alloc]initWithCapacity:2];
     UIImage *image =  info[UIImagePickerControllerOriginalImage];
     if (image) {
         
-        //crop image for image view in view image view controller
-        CGSize maxPhotoSizeForFullPhotoView = CGSizeMake(self.view.frame.size.width *2, self.view.frame.size.height *2);
-        //Why the magical times two here? is it for retina?
-         UIImageView *imageViewLarge = [[UIImageView alloc]initWithImage:[SeeYourAlbumViewController imageWithImage:image scaledToSize:maxPhotoSizeForFullPhotoView]];
-        photoDictionary[LARGE_PHOTO] = imageViewLarge;
+        NSMutableDictionary *photoDictionary = [self buildPhotoDictionary:image];
+
         NSMutableArray *array = [self.photosLarge mutableCopy];
-        [array addObject:imageViewLarge.image];
+        [array addObject:(UIImageView *)photoDictionary[LARGE_PHOTO]];
         self.photosLarge = array;
-        
-        //crop image for this collection view
-        CGSize maxPhotoSizeForCollectionView = CGSizeMake(MAX_PHOTO_SIZE_FOR_SMALL_PHOTO, MAX_PHOTO_SIZE_FOR_SMALL_PHOTO);
-        ImageViewWithPhotoTag *imageViewSmall = [[ImageViewWithPhotoTag alloc] initWithImage:[SeeYourAlbumViewController imageWithImage:image scaledToSize:maxPhotoSizeForCollectionView]];
-        photoDictionary[SMALL_PHOTO] = imageViewSmall;
         
         //add picture to data source
         [self.pictures addObject:[photoDictionary objectForKey:SMALL_PHOTO]];
         
         [self.collectionView reloadData];
         
-        //create photo dictionary for image
-        int currentAlbumPhotoCount = [self.photoCounter intValue];
-        currentAlbumPhotoCount++;
-        NSNumber *newPhotoCounterForThisSession = [NSNumber numberWithInt:currentAlbumPhotoCount];
-        self.photoCounter = newPhotoCounterForThisSession;
-        NSString *completePhotoIDStringValue = [NSString stringWithFormat:@"%@%i",self.albumID, currentAlbumPhotoCount];
-        NSNumber *newAlbumPhotoCount = [NSNumber numberWithInt:[completePhotoIDStringValue integerValue]];
-        [photoDictionary setObject:newAlbumPhotoCount forKey:PHOTO_ID];
-        imageViewSmall.photoID = [completePhotoIDStringValue integerValue];
-        photoDictionary[ALBUM_ID_ON_PHOTO] = self.albumID;
+
 
         //update album attribute photo count
         NSDictionary *updatedAlbumWithNewPhotoCount = [[NSDictionary alloc]initWithObjectsAndKeys:self.photoCounter, PHOTO_COUNTER, self.title, ALBUM_TITLE, self.albumID, ALBUM_ID, self.albumLocation, LOCATION,  nil];
