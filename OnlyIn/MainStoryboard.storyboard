@@ -35,7 +35,7 @@
                                         <fragment content="Login">
                                             <attributes>
                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <font key="NSFont" size="22" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
@@ -52,7 +52,7 @@
                                         <fragment content="Sign Up">
                                             <attributes>
                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <font key="NSFont" size="22" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
@@ -122,7 +122,7 @@
                                         <fragment content="View Albums">
                                             <attributes>
                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <font key="NSFont" size="22" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
@@ -139,7 +139,7 @@
                                         <fragment content="Create New Album">
                                             <attributes>
                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <font key="NSFont" size="22" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
@@ -384,7 +384,7 @@
                                         <fragment content="Invite Friends">
                                             <attributes>
                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <font key="NSFont" size="22" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
@@ -401,7 +401,7 @@
                                         <fragment content="Save Album">
                                             <attributes>
                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <font key="NSFont" size="22" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
@@ -475,7 +475,7 @@
                                         <fragment content="Submit">
                                             <attributes>
                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="22" name="LucidaHandwriting-Italic"/>
+                                                <font key="NSFont" size="22" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
