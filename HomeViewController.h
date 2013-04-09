@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GetMapLocation.h"
+#import "ViewAlbumsTableViewController.h"
 
 @interface HomeViewController : UIViewController
 

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Album+Create.h"
+#import "SMContactsSelector.h"
+#import "SharedDatabaseDocument.h"
+#import "ImageViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "Photo.h"
+#import "CollectionViewCellButton.h"
+#import "ImageViewWithPhotoTag.h"
 
 @interface SeeYourAlbumViewController : UIViewController
 

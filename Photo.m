@@ -7,7 +7,6 @@
 //
 
 #import "Photo.h"
-#import "Album.h"
 
 
 @implementation Photo

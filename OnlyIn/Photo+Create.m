@@ -7,7 +7,6 @@
 //
 
 #import "Photo+Create.h"
-#import "Album+Create.h"
 
 @implementation Photo (Create)
 

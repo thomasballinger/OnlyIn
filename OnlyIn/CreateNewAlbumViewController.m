@@ -7,8 +7,6 @@
 //
 
 #import "CreateNewAlbumViewController.h"
-#import "SMContactsSelector.h"
-#import "ViewAlbumsTableViewController.h"
 
 NSString *const albumTitlePrompt = @"album title";
 

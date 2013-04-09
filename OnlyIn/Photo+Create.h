@@ -8,6 +8,7 @@
 
 #import "Photo.h"
 #import "SeeYourAlbumViewController.h"
+#import "Album+Create.h"
 
 @interface Photo (Create)
 

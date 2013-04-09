@@ -7,10 +7,6 @@
 //
 
 #import "ViewAlbumsTableViewController.h"
-#import "SeeYourAlbumViewController.h"
-#import "Album+Create.h"
-#import "Photo+Create.h"
-#import "ImageViewWithPhotoTag.h"
 
 @interface ViewAlbumsTableViewController () <UIAlertViewDelegate>
 

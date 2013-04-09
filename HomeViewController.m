@@ -7,8 +7,6 @@
 //
 
 #import "HomeViewController.h"
-#import "GetMapLocation.h"
-#import "ViewAlbumsTableViewController.h"
 
 @interface HomeViewController () <setCurrentLocation>
 

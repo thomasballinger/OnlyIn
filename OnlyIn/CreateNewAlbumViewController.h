@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Album+Create.h"
 #import "SharedDatabaseDocument.h"
+#import "SMContactsSelector.h"
+#import "ViewAlbumsTableViewController.h"
 
 @interface CreateNewAlbumViewController : UIViewController
 

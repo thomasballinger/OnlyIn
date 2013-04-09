@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataTableViewController.h"
+#import "SeeYourAlbumViewController.h"
+#import "Album+Create.h"
+#import "Photo+Create.h"
+#import "ImageViewWithPhotoTag.h"
 
 @interface ViewAlbumsTableViewController : CoreDataTableViewController
 
