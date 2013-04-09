@@ -14,7 +14,7 @@
 @implementation CoreDataTableViewController
 
 #pragma mark - Properties
-
+//Is this code for the data-syncing?
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize suspendAutomaticTrackingOfChangesInManagedObjectContext = _suspendAutomaticTrackingOfChangesInManagedObjectContext;
 @synthesize debug = _debug;
