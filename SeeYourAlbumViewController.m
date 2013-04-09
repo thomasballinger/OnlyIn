@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITabBar *tabBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic)  UIImagePickerController *picker;
-@property (nonatomic, strong) NSMutableArray *pictures;
+@property (strong, nonatomic) NSMutableArray *pictures;
 @property (strong, nonatomic) UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) SharedDatabaseDocument *sharedDocument;
 @property (strong, nonatomic) UIImage *currentPhoto;

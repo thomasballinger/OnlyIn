@@ -14,9 +14,9 @@
 @interface Photo : NSManagedObject
 
 @property (nonatomic) int64_t albumID;
-@property (nonatomic, retain) NSData * photoDataLarge;
+@property (strong, nonatomic) NSData * photoDataLarge;
 @property (nonatomic) int64_t photoID;
-@property (nonatomic, retain) NSData * photoDataSmall;
-@property (nonatomic, retain) Album *whichAlbum;
+@property (strong, nonatomic) NSData * photoDataSmall;
+@property (strong, nonatomic) Album *whichAlbum;
 
 @end

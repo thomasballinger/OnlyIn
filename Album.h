@@ -14,10 +14,10 @@
 @interface Album : NSManagedObject
 
 @property (nonatomic) int64_t id;
-@property (nonatomic, retain) NSString * location;
-@property (nonatomic, retain) NSString * title;
+@property (strong, nonatomic) NSString * location;
+@property (strong, nonatomic) NSString * title;
 @property (nonatomic) int16_t photoCounter;
-@property (nonatomic, retain) NSSet *photos;
+@property (strong, nonatomic) NSSet *photos;
 @end
 
 @interface Album (CoreDataGeneratedAccessors)
