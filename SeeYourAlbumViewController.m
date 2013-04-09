@@ -209,12 +209,12 @@
             [self presentViewController:self.picker animated:YES completion:^{
                 [self.spinner stopAnimating];
             }];
-        }   else {
+        } else {
             [alert show];
-            }
-        }       else {
-                [alert show];
-                }
+        }
+    } else {
+        [alert show];
+    }
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -259,7 +259,7 @@
         //save to core data
         [self.sharedDocument prepareDatabaseDocument:photoDictionary withUnsavedAlbumDictionary:updatedAlbumWithNewPhotoCount];
     
-    }   else {
+    } else {
        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error!" message:@"We could not locate your photo. Please make sure your camera is working properly and try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
