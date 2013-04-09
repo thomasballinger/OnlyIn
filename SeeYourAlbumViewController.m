@@ -225,6 +225,7 @@
         
         //crop image for image view in view image view controller
         CGSize maxPhotoSizeForFullPhotoView = CGSizeMake(self.view.frame.size.width *2, self.view.frame.size.height *2);
+        //Why the magical times two here? is it for retina?
          UIImageView *imageViewLarge = [[UIImageView alloc]initWithImage:[SeeYourAlbumViewController imageWithImage:image scaledToSize:maxPhotoSizeForFullPhotoView]];
         photoDictionary[LARGE_PHOTO] = imageViewLarge;
         NSMutableArray *array = [self.photosLarge mutableCopy];
@@ -243,12 +244,11 @@
         
         //create photo dictionary for image
         int currentAlbumPhotoCount = [self.photoCounter intValue];
-        currentAlbumPhotoCount ++;
+        currentAlbumPhotoCount++;
         NSNumber *newPhotoCounterForThisSession = [NSNumber numberWithInt:currentAlbumPhotoCount];
         self.photoCounter = newPhotoCounterForThisSession;
         NSString *completePhotoIDStringValue = [NSString stringWithFormat:@"%@%i",self.albumID, currentAlbumPhotoCount];
-        int64_t completePhotoIDintValue = [completePhotoIDStringValue intValue];
-        NSNumber *newAlbumPhotoCount = [NSNumber numberWithInt:completePhotoIDintValue];
+        NSNumber *newAlbumPhotoCount = [NSNumber numberWithInt:[completePhotoIDStringValue integerValue]];
         [photoDictionary setObject:newAlbumPhotoCount forKey:PHOTO_ID];
         imageViewSmall.photoID = [completePhotoIDStringValue integerValue];
         photoDictionary[ALBUM_ID_ON_PHOTO] = self.albumID;
